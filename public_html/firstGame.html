@@ -1,0 +1,59 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Game</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="firstGame.js" language="javascript">
+
+        </script>
+
+        <style type="text/css">
+            body {                
+                background:#00008B;
+            }
+
+            #debug{                
+                background:white;
+                text-align: center;
+                width:500px;
+                height:200px;
+                position: absolute;
+                bottom: 50px;
+                left: 300px;
+            }
+            
+            #buttons{
+                background:blueviolet;
+                position: absolute;
+                bottom: 0px;
+                left: 400px;
+            }
+            
+            #mario{
+                position: absolute;
+                left:200px;
+                top:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="playerSprite">
+            <img src="images/mario.png" id="mario">
+        </div>
+
+        <div id="debug"></div>
+
+        <div id="buttons">
+            <button id="debugButton">Debug</button>
+            <button id="moveLeftButton" onclick="moveLeft()">Left</button>
+            <button id="showCoordButton" onclick="showCoords()">Coords</button>
+            <button id="mouseMovement" onclick="mouseMoving()">MouseMoving</button>
+        </div>
+    </body>
+
+</html>

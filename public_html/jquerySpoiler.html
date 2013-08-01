@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+        <title>JQuery Spoiler</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        $(document).ready(function(){
+                var zuklapptext = "Verstecken";
+                var aufklapptext = "Zeigen";
+                $(".pre-spoiler").children("input").toggle(
+                        function(){
+                                this.value = zuklapptext;
+                                $(this).parent().children(".spoiler").first().slideDown();
+                        }, function(){
+                                this.value = aufklapptext;
+                                $(this).parent().children(".spoiler").first().slideUp();
+                        });
+                });
+        /* ]]> */
+</script>
+</head>
+<body>
+<div class="pre-spoiler">
+        <input name="button" type="button" value="Buttontext">
+   <div class="spoiler" style="display: none;">Der Text, der sichtbar gemacht wird</div>
+</div>
+</body>
+</html>

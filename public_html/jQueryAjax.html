@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#load").click(function(){
+    $("#div1").load("passwordRequest.html", null, function(responseText){       //null, und function sind optional
+            responseText = "Hallo";
+            alert("Response:\n" + responseText);  
+        });  
+  });
+});
+
+//  $.get()  doesnt work
+    $("#get").click(function(){  
+        $("#result").html(ajax_load);  
+        $.get(  
+            loadUrl,  
+            {language: "php", version: 5},  
+            function(responseText){  
+                $("#result").html(responseText);  
+            },  
+            "html"  
+        );  
+    });    
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<p><button id="load">Get External Content with Load</button></p>
+
+<p><button id="get">Get External Content with Get</button></p>
+
+</body>
+</html>

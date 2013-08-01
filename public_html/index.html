@@ -1,0 +1,41 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Game-Dev</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="spoiler.js" ></script>
+        <link rel="stylesheet" href="spoiler.css" type="text/css" media="screen, projection">
+        <script language="javascript">
+        function changeURL() {
+                for (var i = 0; i < document.form.seitenauswahl.options.length; i++)
+                    if (document.form.seitenauswahl.options[i].selected == true)
+                        open(document.form.seitenauswahl.options[i].value + '.html', target = '_self');
+            }
+            </script>
+    </head>
+    <body>
+        <form name="form">
+            <div id="panel">
+            test content
+        </div>
+
+        <p class="slide"><a href="#" class="btn-slide">Slide Panel</a></p>
+        
+        <p><SELECT Name="seitenauswahl" onchange="changeURL();">
+                <Option value="index">Home
+                <Option value="keyCodeTest">KeyEingaben 
+                <Option value="jQueryTest">JQuerySpoiler
+                <Option value="firstGame">FirstGame 
+                <Option value="jquerySpoiler">JQuerySpoiler2(broken)
+                <Option value="passwordRequest">JqueryPasswordRequest
+                <Option value="jQueryAjax">jQueryAjax
+                    
+            </SELECT>
+        </form>
+    </body>
+</html>
